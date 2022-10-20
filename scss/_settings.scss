@@ -27,7 +27,6 @@ $fontGrey: #888;
     line-height: 1.75rem;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -35,4 +34,19 @@ $fontGrey: #888;
     text-decoration: none;
     list-style: none;
     color: #111;
+}
+html, body, .wrapper {
+    min-height: 100vh;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+main {
+    flex: 1 1 auto;
+}
+
+.container {
+    padding: 0 1rem;
 }
