@@ -18,7 +18,8 @@ $fontInter: 'Inter', sans-serif;
 $fontLora: 'Lora', sans-serif;
 $fontPlayfairDisplay: 'PlayfairDisplay', sans-serif;
 $fontRaleway: 'Raleway', sans-serif;
-$colorGrey: #888;
+$colorGrey1:#666;
+$colorGrey2: #888;
 
 .heading {
     margin-bottom: 24px;
@@ -49,6 +50,9 @@ html, body, .wrapper {
 }
 main {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
 }
 
 .container {
@@ -56,10 +60,6 @@ main {
 }
 
 .slider {
-    .slider__container {
-        padding: 0 0 0 1rem;
-        overflow: hidden;
-    }
     .slider__body {
         display: grid;
         grid-auto-flow: column;
