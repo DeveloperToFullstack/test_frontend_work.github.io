@@ -21,11 +21,15 @@ $fontRaleway: 'Raleway', sans-serif;
 $colorGrey: #888;
 
 .heading {
-    font-family: $fontPlayfairDisplay;
-    font-size: 1.375rem;
-    font-weight: 500;
-    line-height: 1.75rem;
-}
+    margin-bottom: 24px;
+    h2 {
+        font-family: $fontPlayfairDisplay;
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+        letter-spacing: .3px;
+    }
+} 
 
 * {
     margin: 0;
@@ -63,6 +67,20 @@ main {
         margin-bottom: 24px;
     }
     .slide {position: relative;}
+    .slide__img {
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     .slider__slides {
         width: 100%;
         height: 2px;
@@ -73,6 +91,9 @@ main {
         .slides__element.active {
             background: #111;
         }
+    }
+    .slider__slides.range .slides__element {
+        background: #111;
     }
     .slider__slides.count {
         display: grid;

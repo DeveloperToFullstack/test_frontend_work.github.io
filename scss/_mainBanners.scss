@@ -1,4 +1,5 @@
 .main__banners {
+    margin-bottom: 56px;
     .slider__slide {
         width: 324px;
         border-radius: 8px;
@@ -38,16 +39,7 @@
             color: #fff;
         }
         .slide__img {
-            position: relative;
             padding: 0 0 151% 0;
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                object-fit: cover;
-            }
         }
     }
 }

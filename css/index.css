@@ -15,10 +15,14 @@
   src: url("../fonts/Raleway-Regular.woff2");
 }
 .heading {
+  margin-bottom: 24px;
+}
+.heading h2 {
   font-family: "PlayfairDisplay", sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.75rem;
+  letter-spacing: 0.3px;
 }
 
 * {
@@ -61,6 +65,21 @@ main {
 .slider .slide {
   position: relative;
 }
+.slider .slide__img {
+  position: relative;
+  overflow: hidden;
+}
+.slider .slide__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .slider .slider__slides {
   width: 100%;
   height: 2px;
@@ -70,6 +89,9 @@ main {
   height: 100%;
 }
 .slider .slider__slides .slides__element.active {
+  background: #111;
+}
+.slider .slider__slides.range .slides__element {
   background: #111;
 }
 .slider .slider__slides.count {
@@ -123,7 +145,7 @@ header {
   font-family: "Lora", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.0625rem;
-  letter-spacing: 1%;
+  letter-spacing: 0.17px;
   color: #fff;
 }
 .main__title .title__link a {
@@ -145,6 +167,9 @@ header {
   z-index: -1;
 }
 
+.main__banners {
+  margin-bottom: 56px;
+}
 .main__banners .slider__slide {
   width: 324px;
   border-radius: 8px;
@@ -185,15 +210,35 @@ header {
   color: #fff;
 }
 .main__banners .slider__slide .slide__img {
-  position: relative;
   padding: 0 0 151% 0;
 }
-.main__banners .slider__slide .slide__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+
+.main__collections .slider__slide {
+  width: 202px;
+}
+.main__collections .slider__slide .slide__body {
+  display: grid;
+  grid-template-rows: auto 2rem 1fr;
+  gap: 3px;
+}
+.main__collections .slider__slide .slide__img {
+  padding: 0 0 115% 0;
+  border-radius: 8px;
+}
+.main__collections .slider__slide .slide__title {
+  display: flex;
+  align-items: flex-end;
+}
+.main__collections .slider__slide .slide__title h3 {
+  font-family: "Lora", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+.main__collections .slider__slide .slide__text p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1rem;
+  letter-spacing: 0.12px;
 }
