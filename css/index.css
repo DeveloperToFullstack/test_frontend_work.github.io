@@ -107,6 +107,16 @@ header {
   z-index: 10;
 }
 
+header.scroll {
+  background: #fff;
+}
+header.scroll path, header.scroll rect {
+  fill: #111;
+}
+header.scroll .header__search circle, header.scroll .header__search path {
+  stroke: #111;
+}
+
 .header__body {
   width: 100%;
   height: 64px;
@@ -249,7 +259,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
-  gap: 23px 18px;
+  gap: 22px 18px;
   margin-bottom: 24px;
 }
 .main__brands .brands__elements a {
@@ -265,3 +275,61 @@ header {
   line-height: 1.3125rem;
   color: #000;
 }
+
+.main__novelty .slider__body {
+  margin-bottom: 32px;
+}
+.main__novelty .slider__slide {
+  width: 166px;
+  display: grid;
+  grid-template: 1fr 2rem/1fr;
+  gap: 1.5rem;
+}
+.main__novelty .slide-img__container {
+  padding: 46px 6px 46px 28px;
+}
+.main__novelty .slide__img {
+  padding: 0 0 100% 0;
+}
+.main__novelty .slide__title h3 {
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 21px;
+}
+.main__novelty .slide__text p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.12px;
+}
+.main__novelty .slide__main {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0.3rem;
+}
+.main__novelty .slide__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 8px;
+}
+.main__novelty .slide__footer .slide__price {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.main__novelty .slide__footer .slide__price .price-old {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 15px;
+  color: #888;
+  text-decoration: line-through;
+}
+.main__novelty .slide__footer .slide__price .price-new {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 17px;
+  font-weight: 600;
+}/*# sourceMappingURL=index.css.map */

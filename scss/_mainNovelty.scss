@@ -1,0 +1,59 @@
+.main__novelty {
+    .slider__body {
+        margin-bottom: 32px;
+    }
+    .slider__slide {
+        width: 166px;
+        display: grid;
+        grid-template: 1fr 2rem / 1fr;
+        gap: 1.5rem;
+    }
+    .slide-img__container {
+        padding: 46px 6px 46px 28px;
+    }
+    .slide__img {
+        padding: 0 0 100% 0;
+    }
+    .slide__title h3 {
+        font-family: $fontLora;
+        font-weight: 400;
+        font-size: .9375rem;
+        line-height: 21px;
+    }
+    .slide__text p {
+        font-family: $fontInter;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: .12px;
+    }
+    .slide__main {
+        display: grid;
+        grid-auto-flow: row;
+        gap: .3rem;
+    }
+    .slide__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 8px;
+        .slide__price {
+            display: grid;
+            grid-auto-flow: column;
+            gap: .5rem;
+            align-items: flex-end;
+            .price-old {
+                font-family: $fontInter;
+                font-size: 0.75rem;
+                line-height: 15px;
+                color: $colorGrey2;
+                text-decoration:line-through;
+            }
+            .price-new {
+                font-family: $fontInter;
+                font-size: 0.875rem;
+                line-height: 17px;
+                font-weight: 600;
+            }
+        }
+    }
+}
