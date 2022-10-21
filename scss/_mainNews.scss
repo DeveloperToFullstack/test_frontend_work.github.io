@@ -1,0 +1,29 @@
+.main__news {
+    .slider__slide {
+        width: 202px;
+        display: grid;
+        grid-template: auto 1fr / 1fr;
+        gap: 1rem;
+    }
+    .slide__footer {
+        display: grid;
+        grid-template: minmax(2.5rem, auto) 1fr / 1fr;
+        gap: .3rem;
+    }
+    .slide__img {
+        padding: 0 0 75% 0;
+    }
+    .slide__title h3 {
+        font-family: $fontLora;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .slide__text p {
+        font-family: $fontInter;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.12px;
+        color:$colorGrey2;
+    }
+}

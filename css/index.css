@@ -63,6 +63,7 @@ main {
 }
 .slider .slide {
   position: relative;
+  border-radius: 0.5rem;
 }
 .slider .slide__img {
   position: relative;
@@ -332,4 +333,32 @@ header.scroll .header__search circle, header.scroll .header__search path {
   font-size: 0.875rem;
   line-height: 17px;
   font-weight: 600;
+}
+
+.main__news .slider__slide {
+  width: 202px;
+  display: grid;
+  grid-template: auto 1fr/1fr;
+  gap: 1rem;
+}
+.main__news .slide__footer {
+  display: grid;
+  grid-template: minmax(2.5rem, auto) 1fr/1fr;
+  gap: 0.3rem;
+}
+.main__news .slide__img {
+  padding: 0 0 75% 0;
+}
+.main__news .slide__title h3 {
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.main__news .slide__text p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.12px;
+  color: #888;
 }/*# sourceMappingURL=index.css.map */

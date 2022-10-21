@@ -66,7 +66,10 @@ main {
         gap: 1rem;
         margin-bottom: 24px;
     }
-    .slide {position: relative;}
+    .slide {
+        position: relative;
+        border-radius: .5rem;
+    }
     .slide__img {
         position: relative;
         overflow: hidden;
