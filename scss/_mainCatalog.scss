@@ -96,16 +96,7 @@
     }
     .catalog__lazy {
         padding: 1rem 0;
-        text-align: center;
         border-bottom: .5px solid rgba(0, 0, 0, 0.14);
-        button {
-            background: none;
-            padding: 10px 24px;
-            border: 1px solid #D1D1D1;
-            font-family: $fontInter;
-            font-size: 0.75rem;
-            line-height: 15px;
-        }
     }
     .catalog__card {
         display: grid;

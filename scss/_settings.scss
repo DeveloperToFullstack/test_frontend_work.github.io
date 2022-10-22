@@ -110,3 +110,14 @@ main {
         margin: 0;
     }
 }
+.lazy {
+    text-align: center;
+    button {
+        background: none;
+        padding: 10px 24px;
+        border: 1px solid #D1D1D1;
+        font-family: $fontInter;
+        font-size: 0.75rem;
+        line-height: 15px;
+    }
+}
