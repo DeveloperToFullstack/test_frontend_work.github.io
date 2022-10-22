@@ -104,3 +104,9 @@ main {
         gap: 2px;
     }
 }
+.slider-mini {
+    .slider__body {
+        gap: .5rem;
+        margin: 0;
+    }
+}

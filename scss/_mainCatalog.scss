@@ -1,29 +1,30 @@
 .main__catalog {
-    .slider__slide {
-        width: 80px;
-        display: grid;
-        grid-template: auto 1fr / 1fr;
-        gap: .3rem;
-    }
-    .slide__img {
-        width: 90%;
-        padding: 0 0 100% 0;
-        margin: 0 auto;
-        img {
-            object-fit: contain;
+    .catalog__category {
+        .slider__slide {
+            width: 80px;
+            display: grid;
+            grid-template: auto 1fr / 1fr;
+            gap: .3rem;
         }
-    }
-    .slide__title h3 {
-        font-family: $fontInter;
-        font-size: 0.75rem;
-        font-weight: 400;
-        line-height: 15px;
-        letter-spacing: .12px;
-        text-align: center;
+        .slide__img {
+            width: 90%;
+            padding: 0 0 100% 0;
+            margin: 0 auto;
+            img {
+                object-fit: contain;
+            }
+        }
+        .slide__title h3 {
+            font-family: $fontInter;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: .12px;
+            text-align: center;
+        }
     }
     .catalog__menu {
         border-top: 1px solid rgba(0, 0, 0, 0.14);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.14);
         padding: 14px 0;
     }
     .menu-catalog__body {
@@ -91,6 +92,20 @@
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid rgba(0, 0, 0, 0.14);
+    }
+    .catalog__lazy {
+        padding: 1rem 0;
+        text-align: center;
+        border-bottom: .5px solid rgba(0, 0, 0, 0.14);
+        button {
+            background: none;
+            padding: 10px 24px;
+            border: 1px solid #D1D1D1;
+            font-family: $fontInter;
+            font-size: 0.75rem;
+            line-height: 15px;
+        }
     }
     .catalog__card {
         display: grid;
@@ -158,12 +173,130 @@
             text-decoration:line-through;
             margin-right: .5rem;
         }
+        .price-text {
+            font-family: $fontInter;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 14.5px;
+        }
     }
     .catalog__card.card-big {
         grid-column: 1/3; 
         .card__header {
             padding: 0 96px;
         }  
+    }
+    .catalog__poster.sale {
+        background: linear-gradient(16.61deg, #29323C 1.82%, #485563 95.48%);
+        padding: 48px 0 16px 0;
+        .sale__header{
+            text-align: center;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+            h2 {
+                font-family: $fontPlayfairDisplay;
+                font-size: 1.375rem;
+                line-height: 20px;
+                font-weight: 500;
+                color: #fff;
+            }
+            h3 {
+                font-family: $fontPlayfairDisplay;
+                font-size: 1.625rem;
+                line-height: 30px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+        .sale__main{
+            padding: .5rem 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            p {
+                font-family: $fontInter;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                letter-spacing: .12px;
+                color: #fff;
+            }
+        }
+        .sale__footer{
+            display: flex;
+            justify-content: center;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 99px;
+                height: 40px;
+                border: 1px solid #fff;
+                color: #fff;
+                font-family: $fontInter;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                letter-spacing: .12px;
+                color: #fff;
+            }
+        }
+    }
+    .catalog__poster.update {
+        padding: 3.5rem 0;
+        .update__body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .update__header {
+            .update__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .update__img {
+                    margin-right: 12px;
+                }
+                h4 {
+                    font-family: $fontLora;
+                    font-weight: 400;
+                    font-size: 0.9375rem;
+                    line-height: 21px;
+                }
+            }
+        }
+        .update__main {
+            .update__slider {
+                .slider__slide {
+                    width: 128px;
+                }
+                .slide__img {
+                    padding: 0 0 100% 0;
+                }
+            }
+        }
+        .update__footer {
+            text-align: center;
+            a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 184px;
+                height: 40px;
+                background: linear-gradient(266.12deg, #7423BE -6.07%, #C3266B 42.37%, #DD903F 89.82%);
+                border-radius: 100px;
+                padding: 9px 26px 9px 20px;
+            }
+            span {
+                font-family: $fontInter;
+                font-size: 0.75rem;
+                line-height: 15px;
+                color: #fff;
+            }
+            svg {
+                margin-right: 0.5rem;
+                path {
+                    fill: #fff;
+                }
+            }
+        }
     }
     
 }
