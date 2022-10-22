@@ -48,7 +48,8 @@ main {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .container {
@@ -670,4 +671,67 @@ header.scroll .header__search circle, header.scroll .header__search path {
 .main__map .map__iframe iframe {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  background: #F0F0F0;
+  padding: 2.5rem 0.5rem 2rem 0.5rem;
+}
+footer .footer__body {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1.5rem;
+}
+footer .footer__list {
+  display: grid;
+  grid-auto-flow: row;
+  text-align: center;
+}
+footer .footer__list a {
+  font-family: "Lora", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 21px;
+}
+footer .list-btn {
+  gap: 0.5rem;
+}
+footer .list-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D1D1D1;
+  padding: 0.5rem 1rem;
+}
+footer .list-btn li.item-black a {
+  background: #111;
+  color: #fff;
+  border: none;
+}
+footer .list-about {
+  gap: 1.5rem;
+}
+footer .list-language {
+  grid-auto-flow: column;
+  grid-auto-columns: 30px;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+}
+footer .list-language span {
+  color: #888;
+}
+footer .list-language li.active span {
+  color: #111;
+}
+footer .footer__feedback {
+  padding: 1rem 0 0.8rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
