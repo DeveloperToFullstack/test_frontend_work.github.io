@@ -25,6 +25,14 @@
   letter-spacing: 0.3px;
 }
 
+.old {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 14.5px;
+  color: #888;
+  text-decoration: line-through;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +50,33 @@ html, body, .wrapper {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.wrapper__arrow {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
+  border-radius: 100px;
+}
+.wrapper__arrow::after, .wrapper__arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.5rem;
+  height: 1px;
+  background: #111;
+}
+.wrapper__arrow::after {
+  right: 45%;
+  transform: rotate(-45deg);
+}
+.wrapper__arrow::before {
+  left: 48%;
+  transform: rotate(45deg);
 }
 
 main {
@@ -87,6 +122,7 @@ main {
 }
 .slider .slider__slides .slides__element {
   background: rgba(17, 17, 17, 0.14);
+  transition: 0.4s;
   height: 100%;
 }
 .slider .slider__slides .slides__element.active {
@@ -118,12 +154,20 @@ main {
   line-height: 15px;
 }
 
+.like {
+  transition: 0.4s;
+}
+.like.active svg {
+  fill: #111;
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+  transition: 0.4s;
 }
 
 header.scroll {
@@ -195,7 +239,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
 }
 
 .main__banners .slider__slide {
-  width: 324px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -223,9 +266,9 @@ header.scroll .header__search circle, header.scroll .header__search path {
 }
 .main__banners .slider__slide .slide__title h2 {
   font-family: "PlayfairDisplay", sans-serif;
-  color: #fff;
   font-size: 1.625rem;
   line-height: 30px;
+  color: #fff;
 }
 .main__banners .slider__slide .slide__text p {
   font-family: "Lora", sans-serif;
@@ -237,9 +280,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
   padding: 0 0 151% 0;
 }
 
-.main__collections .slider__slide {
-  width: 202px;
-}
 .main__collections .slider__slide .slide__body {
   display: grid;
   grid-template-rows: auto 2rem 1fr;
@@ -262,9 +302,9 @@ header.scroll .header__search circle, header.scroll .header__search path {
 .main__collections .slider__slide .slide__text p {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
-  color: #888;
   line-height: 1rem;
   letter-spacing: 0.12px;
+  color: #888;
 }
 
 .main__brands {
@@ -299,7 +339,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
   margin-bottom: 32px;
 }
 .main__novelty .slider__slide {
-  width: 166px;
   display: grid;
   grid-template: 1fr 2rem/1fr;
   gap: 1.5rem;
@@ -339,13 +378,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
   gap: 0.5rem;
   align-items: flex-end;
 }
-.main__novelty .slide__footer .slide__price .price-old {
-  font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
-  line-height: 15px;
-  color: #888;
-  text-decoration: line-through;
-}
 .main__novelty .slide__footer .slide__price .price-new {
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
@@ -354,7 +386,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
 }
 
 .main__news .slider__slide {
-  width: 202px;
   display: grid;
   grid-template: auto 1fr/1fr;
   gap: 1rem;
@@ -382,7 +413,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
 }
 
 .main__catalog .catalog__category .slider__slide {
-  width: 80px;
   display: grid;
   grid-template: auto 1fr/1fr;
   gap: 0.3rem;
@@ -430,6 +460,10 @@ header.scroll .header__search circle, header.scroll .header__search path {
   justify-content: flex-end;
   align-items: center;
   padding: 0 5px 0 0;
+}
+.main__catalog .catalog__sort .sort__visible {
+  display: flex;
+  align-items: center;
 }
 .main__catalog .catalog__sort .sort__unvisible {
   position: absolute;
@@ -539,10 +573,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
   line-height: 17px;
 }
 .main__catalog .card__price .price-old {
-  font-size: 0.75rem;
-  line-height: 14.5px;
-  color: #888;
-  text-decoration: line-through;
   margin-right: 0.5rem;
 }
 .main__catalog .card__price .price-text {
@@ -631,9 +661,6 @@ header.scroll .header__search circle, header.scroll .header__search path {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 21px;
-}
-.main__catalog .catalog__poster.update .update__main .update__slider .slider__slide {
-  width: 128px;
 }
 .main__catalog .catalog__poster.update .update__main .update__slider .slide__img {
   padding: 0 0 100% 0;

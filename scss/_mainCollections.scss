@@ -1,6 +1,5 @@
 .main__collections {
     .slider__slide {
-        width: 202px;
         .slide__body {
             display: grid;
             grid-template-rows: auto 2rem 1fr;
@@ -20,14 +19,12 @@
                 line-height: 20px;
             }
         }
-        .slide__text {
-            p {
-                font-family: $fontInter;
-                font-size: 0.75rem;
-                color: $colorGrey2;
-                line-height: 1rem;
-                letter-spacing: .12px;
-            }
+        .slide__text p {
+            font-family: $fontInter;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            letter-spacing: .12px;
+            color: $colorGrey2;
         }
     }
 }

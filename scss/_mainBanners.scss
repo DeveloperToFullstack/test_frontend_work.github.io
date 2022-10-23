@@ -1,6 +1,5 @@
 .main__banners {
     .slider__slide {
-        width: 324px;
         border-radius: 8px;
         overflow: hidden;
         &::after {
@@ -27,9 +26,9 @@
         }
         .slide__title h2 {
             font-family: $fontPlayfairDisplay;
-            color: #fff;
             font-size: 1.625rem;
             line-height: 30px;
+            color: #fff;
         }
         .slide__text p {
             font-family: $fontLora;

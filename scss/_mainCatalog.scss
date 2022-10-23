@@ -1,7 +1,6 @@
 .main__catalog {
     .catalog__category {
         .slider__slide {
-            width: 80px;
             display: grid;
             grid-template: auto 1fr / 1fr;
             gap: .3rem;
@@ -49,6 +48,10 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0 5px 0 0;
+        .sort__visible {
+            display: flex;
+            align-items: center;
+        }
         .sort__unvisible {
             position: absolute;
             top: 120%;
@@ -158,10 +161,6 @@
             line-height: 17px;
         }
         .price-old {
-            font-size: 0.75rem;
-            line-height: 14.5px;
-            color: $colorGrey2;
-            text-decoration:line-through;
             margin-right: .5rem;
         }
         .price-text {
@@ -255,9 +254,6 @@
         }
         .update__main {
             .update__slider {
-                .slider__slide {
-                    width: 128px;
-                }
                 .slide__img {
                     padding: 0 0 100% 0;
                 }

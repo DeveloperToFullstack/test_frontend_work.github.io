@@ -3,7 +3,6 @@
         margin-bottom: 32px;
     }
     .slider__slide {
-        width: 166px;
         display: grid;
         grid-template: 1fr 2rem / 1fr;
         gap: 1.5rem;
@@ -41,13 +40,6 @@
             grid-auto-flow: column;
             gap: .5rem;
             align-items: flex-end;
-            .price-old {
-                font-family: $fontInter;
-                font-size: 0.75rem;
-                line-height: 15px;
-                color: $colorGrey2;
-                text-decoration:line-through;
-            }
             .price-new {
                 font-family: $fontInter;
                 font-size: 0.875rem;
