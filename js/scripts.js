@@ -29,7 +29,7 @@ function getFrame () {
         let dataFrame = frameblock.dataset.src;
         if (dataFrame) {
             frameblock.insertAdjacentHTML('beforeend',
-            `<iframe src="${dataFrame}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`)
+            `<iframe src="${dataFrame}" style="border:0;" allowfullscreen="" title="frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`)
         }
         frameblock.removeAttribute('data-src');
     }
