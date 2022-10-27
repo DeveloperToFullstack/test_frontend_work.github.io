@@ -1,10 +1,27 @@
-window.addEventListener('scroll', scrollEvent);
+window.addEventListener('scroll', scrollEvent, {passive:true});
 //lazy load start
 
 let frameblock = document.querySelector('.map__iframe');
+let imgBlocks = document.querySelectorAll('img[data-src]');
+let imgHeight = [];
 const windowHeight = document.documentElement.clientHeight;
 
-
+if (imgBlocks.length) {
+    imgBlocks.forEach(img => {
+        if (img.dataset.src) {
+            imgHeight.push(img.getBoundingClientRect().top + scrollY);
+        }
+    })
+    getImg();
+}
+function getImg () {
+    let index = imgHeight.findIndex(img => scrollY > img - windowHeight);
+    if (index >= 0) {
+        imgBlocks[index].src = imgBlocks[index].dataset.src;
+        imgBlocks[index].removeAttribute('data-src');
+    }
+    delete imgHeight[index];
+}
 
 function getFrame () {
     const heightBlock = frameblock.getBoundingClientRect().top + scrollY;
@@ -23,6 +40,9 @@ function getFrame () {
 function scrollEvent () {
     if (frameblock.dataset.src) {
         getFrame(); //get frame
+    }
+    if (document.querySelectorAll('img[data-src]').length) {
+        getImg();
     }
     scrollHeader();
 }
