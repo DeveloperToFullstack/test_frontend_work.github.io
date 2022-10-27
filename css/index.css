@@ -1,18 +1,22 @@
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Lora";
   src: url("../fonts/Lora-Regular.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "PlayfairDisplay";
   src: url("../fonts/PlayfairDisplay-Regular.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.woff2");
+  font-display: swap;
 }
 .heading {
   margin-bottom: 24px;
@@ -762,4 +766,4 @@ footer .footer__feedback {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-}
+}/*# sourceMappingURL=index.css.map */
