@@ -243,6 +243,9 @@ header.scroll .header__search circle, header.scroll .header__search path {
   z-index: -1;
 }
 
+.main__banners .banners__heading {
+  display: none;
+}
 .main__banners .slider__slide {
   border-radius: 8px;
   overflow: hidden;
